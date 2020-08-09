@@ -1,5 +1,3 @@
-const username = prompt("Enter Your name😉");
-
 const socket = io("/");
 var peer = new Peer(undefined, {
   path: "/peerjs",
@@ -42,7 +40,7 @@ navigator.mediaDevices
 
     socket.on("createMessage", (message) => {
       $(".messages").append(
-        `<li class="message"><b>${username}</b><br/>${message}</li>`
+        `<li class="message"><b>user:</b><br/>${message}</li>`
       );
       scrollToBottom();
     });
